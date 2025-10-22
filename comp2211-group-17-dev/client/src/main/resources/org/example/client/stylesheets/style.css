@@ -1,0 +1,273 @@
+.root.light-theme {
+    -primary-bg: #ABCBEB;
+    -secondary-bg: #2F3887;
+    -tertiary-bg: White;
+    -main-bg:#2F3887;
+    -text-primary: Black;
+    -text-secondary: White;
+    -accent-blue: #6495EA;
+    -accent-border: #8FB1EC;
+    -input-bg: White;
+    -input-border: LightGrey;
+    -special-blue: CornflowerBlue;
+    -table-header-bg: #f0f0f0;
+    -table-text: Black;
+    -tab-bg: #f0f0f0;
+    -hover-bg: #d3d3d2;
+    -combo-radius: 10px;
+    -combo-border-width: 4px;
+}
+
+.root.dark-theme {
+    -primary-bg: #0B1E25;
+    -secondary-bg: #0F3D4E;
+    -tertiary-bg: #3F535B;
+    -main-bg: #0B1E25;
+    -text-primary: #33D2A3;
+    -text-secondary: White;
+    -accent-blue: #3F535B;
+    -accent-border: #4F6870;
+    -input-bg: #3F535B;
+    -input-border: #4F6870;
+    -special-blue: #0B1E25;
+    -table-header-bg: #33D2A3;
+    -table-text: #28B7CD;
+    -tab-bg: #0B1E25;
+    -hover-bg: #d3d3d2;
+    -combo-radius: 7px;
+    -combo-border-width: 3px;
+}
+
+/* ========== GLOBAL STYLES ========== */
+.root {
+    -fx-background-color: -primary-bg;
+}
+
+.combo-box {
+    -fx-background-color: -tertiary-bg;
+    -fx-font-size: 14px;
+    -fx-border-radius: 7px;
+    -fx-background-radius: 10px;
+    -fx-border-width: 4px;
+    -fx-border-color: -input-border;
+    -fx-text-fill: -text-primary;
+}
+
+.combo-box .list-cell {
+    -fx-background-color: -tertiary-bg;
+    -fx-font-size: 14px;
+    -fx-text-fill: -text-primary;
+}
+
+.tilted-pane {
+    -fx-background-color: -special-blue;
+    -fx-background-radius: 10px;
+    -fx-font-size: 14px;
+    -fx-border-radius: 7px;
+    -fx-border-width: 7px;
+    -fx-alignment: center;
+}
+
+#helloButton {
+    -fx-background-color: -accent-blue;
+    -fx-font-size: 30px;
+    -fx-background-radius: 20px;
+    -fx-text-fill: -text-secondary;
+    -fx-border-radius: 15px;
+    -fx-border-width: 8px;
+    -fx-border-color: -accent-border;
+}
+
+.add-button {
+    -fx-font-size: 20px;
+    -fx-text-fill: -text-secondary;
+    -fx-border-radius: 5px;
+    -fx-border-width: 3px;
+    -fx-background-radius: 5px;
+    -fx-background-color: -accent-blue;
+    -fx-border-color: -accent-border;
+}
+
+.var-input, .login-input {
+    -fx-background-color: -input-bg;
+    -fx-border-color: -input-border;
+}
+
+.var-input {
+    -fx-border-radius: 7px;
+    -fx-border-width: 3px;
+    -fx-font-size: 15px;
+    -fx-background-radius: 7px;
+}
+
+.login-input {
+    -fx-border-radius: 15px;
+    -fx-background-radius: 20px;
+    -fx-font-size: 20px;
+    -fx-border-width: 5px;
+    -fx-border-color: LightGrey;
+}
+
+.var-input:hover {
+    -fx-background-color: -hover-bg;
+    -fx-text-fill: -text-secondary;
+}
+
+.section-label {
+    -fx-font-size: 30px;
+    -fx-text-fill: -text-secondary;
+}
+
+.var-label {
+    -fx-font-size: 15px;
+    -fx-text-fill: -text-secondary;
+}
+
+.thresh-display {
+    -fx-font-size: 25px;
+    -fx-text-fill: Red;
+    -fx-font-weight: bold;
+}
+
+.dropdown-pane, .runway, #runway-pane {
+    -fx-background-color: -secondary-bg;
+}
+.visual-pane{
+    -fx-background-color: -main-bg;
+}
+
+.login-vbox {
+    -fx-padding: 20px;
+    -fx-pref-width: 500px;
+    -fx-min-width: 500px;
+    -fx-max-width: 500px;
+    -fx-pref-height: 500px;
+    -fx-min-height: 500px;
+    -fx-max-height: 500px;
+    -fx-background-radius: 15px;
+    -fx-background-color: -secondary-bg;
+}
+
+.login-title {
+    -fx-font-size: 50px;
+    -fx-text-fill: -text-secondary;
+}
+
+.table-view .column-header .label {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -table-text;
+}
+
+.table-view .column-header {
+    -fx-pref-height: 50px;
+    -fx-background-color: -table-header-bg;
+}
+
+.table-view {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-background-color: -tertiary-bg;
+}
+
+.table-view .table-row-cell {
+    -fx-background-color: -primary-bg;
+}
+
+.table-view .table-cell {
+    -fx-text-fill: -table-text;
+}
+
+.tilted-pane .title {
+    -fx-font-size: 15px;
+    -fx-background-color: -tertiary-bg;
+    -fx-font-fill: -text-secondary;
+    -fx-background-radius: 15px;;
+    -fx-border-color: -input-border;
+    -fx-border-width: 5px;
+    -fx-border-radius: 5px;
+}
+
+.tab-pane {
+    -fx-background-color: -tab-bg;
+}
+
+.tab {
+    -fx-pref-height: 40px;
+    -fx-font-size: 15px;
+    -fx-background-color: -tab-bg;
+}
+
+#path {
+    -fx-text-fill: -text-secondary;
+}
+
+.buttonbox {
+    -fx-padding: 40px;
+    -fx-spacing: 40px;
+}
+
+.roundbtn {
+    -fx-background-color: -accent-blue;
+    -fx-font-size: 20px;
+    -fx-text-fill: -text-secondary;
+}
+
+.chooser-button {
+    -fx-text-fill: -text-secondary;
+    -fx-background-color: -accent-blue;
+    -fx-border-color: -accent-border;
+    -fx-border-width: 3px;
+    -fx-border-radius:5px;
+    -fx-background-radius: 5px;
+}
+
+.bottom-strip {
+    -fx-background-color: -main-bg;
+    -fx-padding: 20px;
+}
+
+.threshold-label {
+    -fx-font-size: 25px;
+    -fx-text-fill: -text-secondary;
+}
+
+.root.dark-theme .table-view .table-cell {
+    -fx-text-fill: #28B7CD;
+}
+
+.root.dark-theme .menu-bar {
+    -fx-background-color: -primary-bg;
+}
+
+.root.dark-theme .menu-bar .label {
+    -fx-text-fill: -text-primary;
+}
+.root.dark-theme{
+    -fx-background-color: -primary-bg;
+}
+
+
+/* For reveal button */
+.root .reveal-image {
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-size: 30px 30px;
+}
+
+.root.light-theme .reveal-open {
+    -fx-background-image: url("../eye.png");
+}
+
+.root.dark-theme .reveal-open {
+    -fx-background-image: url("../darkeye.png");
+}
+
+.root.light-theme .reveal-closed {
+    -fx-background-image: url("../eyebrow.png");
+}
+
+.root.dark-theme .reveal-closed {
+    -fx-background-image: url("../darkclosed.png");
+}

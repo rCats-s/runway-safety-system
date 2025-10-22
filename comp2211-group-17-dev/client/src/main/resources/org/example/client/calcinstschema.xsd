@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="CalcInst">
+        <xs:complexType>
+            <xs:sequence>
+
+                <xs:element name="name" type="xs:string"/>
+                <xs:element name="status">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="Landing"/>
+                            <xs:enumeration value="Taking Off"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="runwayPair" type="xs:string"/>
+                <xs:element name="LRrunway" type="xs:string"/>
+
+                <xs:element name="Calculation">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="etora" type="xs:int"/>
+                            <xs:element name="etoda" type="xs:int"/>
+                            <xs:element name="easda" type="xs:int"/>
+                            <xs:element name="elda" type="xs:int"/>
+                            <xs:element name="wtora" type="xs:int"/>
+                            <xs:element name="wtoda" type="xs:int"/>
+                            <xs:element name="wasda" type="xs:int"/>
+                            <xs:element name="wlda" type="xs:int"/>
+                            <xs:element name="strip" type="xs:int"/>
+                            <xs:element name="resa" type="xs:int"/>
+                            <xs:element name="wclearway" type="xs:int"/>
+                            <xs:element name="wstopway" type="xs:int"/>
+                            <xs:element name="eclearway" type="xs:int"/>
+                            <xs:element name="estopway" type="xs:int"/>
+                            <xs:element name="dt" type="xs:int"/>
+                            <xs:element name="initelda" type="xs:int"/>
+                            <xs:element name="initeasda" type="xs:int"/>
+                            <xs:element name="initetora" type="xs:int"/>
+                            <xs:element name="initetoda" type="xs:int"/>
+                            <xs:element name="initwlda" type="xs:int"/>
+                            <xs:element name="initwasda" type="xs:int"/>
+                            <xs:element name="initwtora" type="xs:int"/>
+                            <xs:element name="initwtoda" type="xs:int"/>
+                            <xs:element name="blastprot" type="xs:int"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="eobjdist" type="xs:int"/>
+                <xs:element name="wobjdist" type="xs:int"/>
+                <xs:element name="centredist" type="xs:int"/>
+
+                <xs:element name="Obstacle">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="name" type="xs:string"/>
+                            <xs:element name="physicalheight" type="xs:int"/>
+<!--                            <xs:element name="image" type="xs:string"/>-->
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="Planes">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="name" type="xs:string"/>
+                            <xs:element name="width" type="xs:int"/>
+                            <xs:element name="height" type="xs:int"/>
+                            <xs:element name="blastprot" type="xs:int"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

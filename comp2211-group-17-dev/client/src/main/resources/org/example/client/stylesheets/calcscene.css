@@ -1,0 +1,154 @@
+.root.light-theme {
+    -primary-bg: #ABCBEB;
+    -secondary-bg: #2F3887;
+    -tertiary-bg: White;
+    -text-primary: Black;
+    -text-secondary: White;
+    -accent-blue: #6495EA;
+    -accent-border: #8FB1EC;
+    -input-bg: White;
+    -input-border: LightGrey;
+    -special-blue: CornflowerBlue;
+    -table-header-bg: #f0f0f0;
+    -table-text: Black;
+    -tab-bg: #f0f0f0;
+    -hover-bg: #d3d3d2;
+    -combo-radius: 10px;
+    -combo-border-width: 4px;
+}
+
+.root.dark-theme {
+    -primary-bg: #0B1E25;
+    -secondary-bg: #0F3D4E;
+    -tertiary-bg: #3F535B;
+    -text-primary: #33D2A3;
+    -text-secondary: White;
+    -accent-blue: #3F535B;
+    -accent-border: #4F6870;
+    -input-bg: #3F535B;
+    -input-border: #4F6870;
+    -special-blue: #0B1E25;
+    -table-header-bg: #0B1E25;
+    -table-text: #28B7CD;
+    -tab-bg: #0B1E25;
+    -hover-bg: #d3d3d2;
+    -combo-radius: 7px;
+    -combo-border-width: 3px;
+}
+
+.calc-title{
+    -fx-font-size: 25px;
+    -fx-text-fill: white;
+    -fx-padding: 20px;
+    -fx-font-weight:bold;
+}
+.root{
+    -fx-background-color: -secondary-bg;
+}
+.root.light-theme .list-view {
+    -fx-background-color: -primary-bg;
+}
+.root.dark-theme .list-view {
+    -fx-background-color: #3F535B;
+}
+
+.root.light-theme .list-cell:even {
+     -fx-text-fill: black;
+    -fx-font-size: 15px;
+    -fx-background-color: #6495EA;
+     -fx-padding: 10 10 10 30;
+}
+
+.root.dark-theme .list-cell:even {
+    -fx-text-fill: #33D2A3;
+    -fx-font-size: 15px;
+    -fx-background-color: #0F3D4E;
+    -fx-padding: 10 10 10 30;
+}
+
+.root.light-theme .list-cell {
+    -fx-background-color: #ABCBEB;
+    -fx-text-fill: black;
+    -fx-font-weight:bold;
+    -fx-font-size: 15px;
+    -fx-padding: 10 10 10 30;
+}
+
+.root.dark-theme .list-cell {
+    -fx-text-fill: #33D2A3;
+    -fx-font-size: 15px;
+    -fx-font-weight:bold;
+    -fx-background-color: #3F535B;
+    -fx-padding: 10 10 10 30;
+}
+
+.createbtn{
+    -fx-font-size: 20px;
+    -fx-text-fill: White;
+    -fx-pref-width:150px;
+    -fx-min-width:150px;
+    -fx-pref-height: 50px;
+    -fx-min-height:50px;
+    -fx-border-color:LightGrey;
+    -fx-border-width:3px;
+    -fx-border-radius: 8px;
+    -fx-background-radius:15px;}
+
+.roundbtn{
+    -fx-background-color: #6495EA;
+}
+
+.root.light-theme .roundbtn {
+    -fx-background-color: #6495EA;
+}
+
+.root.dark-theme .roundbtn {
+    -fx-background-color: #3F535B;
+}
+
+.root.light-theme .createbtn {
+    -fx-background-color: #6495EA;
+}
+
+.root.dark-theme .createbtn {
+    -fx-background-color: #3F535B;
+}
+
+.createaptbtn {
+    -fx-font-size: 20px;
+    -fx-text-fill: White;
+    -fx-pref-width:200px;
+    -fx-min-width:200px;
+    -fx-pref-height: 50px;
+    -fx-min-height:50px;
+    -fx-border-color:LightGrey;
+    -fx-border-width:3px;
+    -fx-border-radius: 8px;
+    -fx-background-radius:15px;
+}
+
+.roundbtn {
+    -fx-font-size: 20px;
+    -fx-text-fill: White;
+}
+
+.root.light-theme .createaptbtn{
+    -fx-background-color: #6495EA;
+}
+
+.root.light-theme .roundbtn{
+    -fx-background-color: #6495EA;
+}
+
+.root.dark-theme .createaptbtn{
+    -fx-background-color: #3F535B;
+}
+
+.root.dark-theme .roundbtn{
+    -fx-background-color: #3F535B;
+}
+
+.button-bar > .container {
+    -fx-spacing: 30px;
+    -fx-padding: 20px;
+}

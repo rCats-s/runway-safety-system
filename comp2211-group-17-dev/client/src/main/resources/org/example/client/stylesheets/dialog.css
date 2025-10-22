@@ -1,0 +1,90 @@
+
+.dialog-pane.light-theme {
+    -secondary-bg: #2F3887;
+}
+
+.dialog-pane.dark-theme {
+    -secondary-bg: #0F3D4E;
+}
+
+.dialog-pane .header-panel {
+    -fx-background-color: -secondary-bg;
+    -fx-padding: 10;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.dialog-pane .header-panel .label {
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.dialog-pane .content .label {
+    -fx-text-fill: white;
+}
+
+.dialog-pane .button {
+    -fx-text-fill: white;
+    -fx-background-radius: 5;
+}
+
+.dialog-pane.light-theme .button {
+    -fx-background-color: #5cacee;
+}
+
+.dialog-pane.dark-theme .button {
+    -fx-background-color: #3F535B;
+}
+
+.dialog-pane .label {
+    -fx-text-fill:white;
+
+}
+
+.dialog-pane .button-bar {
+    -fx-background-color: -secondary-bg;
+    -fx-padding: 15px;
+    -fx-spacing: 10px;
+    -fx-alignment: CENTER_RIGHT;
+}
+
+
+.dialog-pane .text-field {
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 8;
+    -fx-text-fill:black;
+    -fx-font-size: 14px;
+}
+
+.dialog-pane.light-theme .text-field {
+    -fx-background-color:white;
+    -fx-border-color: #336699;
+}
+
+.dialog-pane.dark-theme .text-field {
+    -fx-background-color:#3F535B;
+    -fx-border-color: #336699;
+}
+
+.dialog-pane .combo-box .label {
+    -fx-text-fill: #b0bec5;
+}
+
+.dialog-pane.light-theme .combo-box {
+    -fx-background-color:white;
+    -fx-text-fill: #b0bec5;
+}
+
+.dialog-pane.dark-theme .combo-box {
+    -fx-background-color:#3F535B;
+    -fx-text-fill: white;
+}
+
+.dialog-pane .content {
+    -fx-background-color: -secondary-bg;
+    -fx-padding: 15;
+}

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import org.example.client.components.AppMenuBar?>
+<?import org.example.client.components.HelpBtn?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.Tab?>
+<?import org.example.client.components.DarkBtn?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.client.AdminViewController"
+      prefHeight="400.0" prefWidth="600.0" fx:id="root">
+  <AppMenuBar VBox.vgrow="NEVER" />
+  <TabPane tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+    <Tab text="Manage Users">
+      <VBox>
+        <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" VBox.vgrow="NEVER">
+          <Label maxHeight="1.7976931348623157E308" text="Manage Users" HBox.hgrow="ALWAYS" styleClass="calc-title" />
+          <Pane HBox.hgrow="ALWAYS"/>
+          <ButtonBar prefHeight="40.0" prefWidth="200.0" HBox.hgrow="NEVER">
+            <buttons>
+              <Button mnemonicParsing="false" text="Create User" onAction="#onCreateNewClicked" styleClass="createbtn"/>
+              <DarkBtn fx:id="darkbtn" styleClass="roundbtn"/>
+              <HelpBtn styleClass="roundbtn" fx:id="helpbtn"/>
+            </buttons>
+          </ButtonBar>
+          <padding>
+            <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+          </padding>
+        </HBox>
+      <AnchorPane VBox.vgrow="ALWAYS">
+        <ListView AnchorPane.bottomAnchor="0.0"
+                  AnchorPane.leftAnchor="0.0"
+                  AnchorPane.rightAnchor="0.0"
+                  AnchorPane.topAnchor="0.0" fx:id="listView" />
+      </AnchorPane></VBox>
+    </Tab>
+    <Tab text="Manage Airports">
+      <VBox>
+        <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" VBox.vgrow="NEVER">
+          <Label maxHeight="1.7976931348623157E308" text="Manage Airports" HBox.hgrow="ALWAYS" styleClass="calc-title" />
+          <Pane HBox.hgrow="ALWAYS"/>
+          <ButtonBar prefHeight="40.0" prefWidth="200.0" HBox.hgrow="NEVER">
+            <buttons>
+              <Button mnemonicParsing="false" text="Create Airport" onAction="#onCreateNewAirportClicked" styleClass="createaptbtn"/>
+              <DarkBtn fx:id="darkbtn2" styleClass="roundbtn"/>
+              <HelpBtn styleClass="roundbtn" fx:id="helpbtn2"/>
+            </buttons>
+          </ButtonBar>
+          <padding>
+            <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+          </padding>
+        </HBox>
+        <AnchorPane VBox.vgrow="ALWAYS">
+          <ListView AnchorPane.bottomAnchor="0.0"
+                    AnchorPane.leftAnchor="0.0"
+                    AnchorPane.rightAnchor="0.0"
+                    AnchorPane.topAnchor="0.0" fx:id="listViewAirport" />
+        </AnchorPane>
+      </VBox>
+    </Tab>
+  </TabPane>
+</VBox>

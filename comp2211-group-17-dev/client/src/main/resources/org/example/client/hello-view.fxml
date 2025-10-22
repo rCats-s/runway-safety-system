@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import org.example.client.components.HelpBtn?>
+<?import javafx.scene.control.PasswordField?>
+<?import org.example.client.components.DarkBtn?>
+<?import org.example.client.components.RevealBtn?>
+<StackPane fx:controller="org.example.client.ClientController" xmlns:fx="http://javafx.com/fxml" fx:id="root">
+    <VBox alignment="CENTER" spacing="20">
+    <ImageView preserveRatio="true" fx:id="sotonlogo"/>
+        <VBox alignment="CENTER" spacing="50.0"
+               fx:id="mainbox"  styleClass="login-vbox">
+          <padding>
+             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+           </padding>
+          <Label alignment="CENTER" styleClass="login-title">Login</Label>
+
+          <TextField  maxHeight="50" maxWidth="300" minHeight="50" promptText="Username"
+            fx:id="username" styleClass="login-input"/>
+
+            <HBox spacing="20" alignment="CENTER" maxWidth="300">
+                <PasswordField maxHeight="50" maxWidth="300" minHeight="50" promptText="Password"
+                             fx:id="password" styleClass="login-input"/>
+                <TextField fx:id="passwordShow" promptText="Password" visible="false" managed="false" maxHeight="50" maxWidth="300" minHeight="50" styleClass="login-input"/>
+                <RevealBtn fx:id="revealbtn" styleClass="roundbtn" />
+            </HBox>
+          <Button  maxHeight="80" maxWidth="200" minHeight="80" onAction="#onHelloButtonClick"
+            text="Login" fx:id="helloButton"/>
+        </VBox>
+        <HBox alignment="CENTER_RIGHT" styleClass="buttonbox" spacing="20">
+            <DarkBtn styleClass="roundbtn" fx:id="darkBtn"/>
+            <HelpBtn AnchorPane.bottomAnchor="10" AnchorPane.rightAnchor="10" styleClass="roundbtn" fx:id="helpbtn"/>
+        </HBox>
+    </VBox>
+    <!-- <AnchorPane prefWidth="40" prefHeight="40" StackPane.alignment="BOTTOM_RIGHT" pickOnBounds="false"> -->
+<!--        <HBox>-->
+<!--        <DarkBtn styleClass="roundbtn" fx:id="darkBtn"/>-->
+<!--        <HelpBtn AnchorPane.bottomAnchor="10" AnchorPane.rightAnchor="10" styleClass="roundbtn"/>-->
+<!--        </HBox>-->
+<!--    </AnchorPane>-->
+</StackPane>

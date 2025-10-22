@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<ScrollPane xmlns:fx="http://javafx.com/fxml"
+            xmlns="http://javafx.com/javafx"
+            fitToWidth="true"
+            maxHeight="400"
+            prefHeight="400">
+    <VBox spacing="10" style="-fx-background-color: -secondary-bg;">
+        <Label style="-fx-font-size: 20px;-fx-font-weight: bold;">Help Documentation</Label>
+        <HBox spacing="3">
+            <Label text="Help Documentation, "/>
+            <Hyperlink text="Link" onAction="#openLink"
+                       userData="http://ilia.desi/seg/manual.pdf"/>
+        </HBox>
+        <Label style="-fx-font-size: 20px;-fx-font-weight: bold;">Attributions</Label>
+        <HBox spacing="3">
+            <Label text="University of Southampton Logo, "/>
+            <Hyperlink text="Source" onAction="#openLink"
+                       userData="https://en.wikipedia.org/wiki/File:University_of_Southampton_Logo.png#/media/File:University_of_Southampton_Logo.png"/>
+        </HBox>
+        <HBox spacing="3">
+            <Label text="Moon Icon, "/>
+            <Hyperlink text="Source" onAction="#openLink" userData="https://www.flaticon.com/free-icons/moon"/>
+        </HBox>
+        <HBox spacing="3">
+            <Label text="Closed eye icon, "/>
+            <Hyperlink text="Source" onAction="#openLink" userData="https://www.flaticon.com/free-icons/close-eye"/>
+        </HBox>
+        <HBox spacing="3">
+            <Label text="Eye icon, "/>
+            <Hyperlink text="Source" onAction="#openLink" userData="https://www.flaticon.com/free-icons/eye"/>
+        </HBox>
+        <HBox spacing="3">
+            <Label text="Moon Icon (Admin, Calculation, &amp; Visualisations Scenes), "/>
+            <Hyperlink text="Source" onAction="#openLink" userData="https://www.flaticon.com/free-icons/moon"/>
+        </HBox>
+        <HBox spacing="3">
+            <Label text="Rock Icon, "/>
+            <Hyperlink text="?"/>
+        </HBox>
+        <HBox spacing="3">
+            <Label text="Bird Icon, "/>
+            <Hyperlink text="?"/>
+        </HBox>
+        <HBox spacing="3">
+            <Label text="Plane Icon, "/>
+            <Hyperlink text="?"/>
+        </HBox>
+        <HBox spacing="3">
+            <Label text="Boeing Icon, "/>
+            <Hyperlink text="?"/>
+        </HBox>
+    </VBox>
+</ScrollPane>

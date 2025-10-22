@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CalcInst>
+	<name>Calc1</name>
+	<status>Landing</status>
+	<runwayPair>09L/27R</runwayPair>
+	<Calculation>
+		<etora>1000</etora>
+		<etoda>100</etoda>
+		<easda>1000</easda>
+		<elda>100</elda>
+		<wtora>100</wtora>
+		<wtoda>100</wtoda>
+		<wasda>100</wasda>
+		<wlda>100</wlda>
+		<strip>0</strip>
+		<resa>0</resa>
+		<wclearway>5</wclearway>
+		<wstopway>7</wstopway>
+		<eclearway>0</eclearway>
+		<estopway>0</estopway>
+		<dt>10</dt>
+		<initelda>0</initelda>
+		<initeasda>0</initeasda>
+		<initetora>0</initetora>
+		<initetoda>0</initetoda>
+		<initwlda>0</initwlda>
+		<initwasda>0</initwasda>
+		<initwtora>0</initwtora>
+		<initwtoda>0</initwtoda>
+		<blastprot>0</blastprot>
+	</Calculation>
+	<eobjdist>1</eobjdist>
+	<wobjdist>1</wobjdist>
+	<centredist>1</centredist>
+	<Obstacle>
+		<name>Rock</name>
+		<physicalheight>10</physicalheight>
+	</Obstacle>
+	<Planes>
+		<name>Beechcraft King Air</name>
+		<width>100</width>
+		<height>50</height>
+		<blastprot>300</blastprot>
+	</Planes>
+</CalcInst>

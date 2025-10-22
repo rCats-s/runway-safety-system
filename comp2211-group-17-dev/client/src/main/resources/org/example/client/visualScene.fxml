@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import org.example.client.components.ObstacleSelector?>
+<?import org.example.client.components.Runway?>
+<?import org.example.client.components.SimpleTableView?>
+
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<?import org.example.client.components.AppMenuBar?>
+<?import org.example.client.components.DoubleTextField?>
+<?import org.example.client.components.IntegerTextField?>
+<?import org.example.client.components.HelpBtn?>
+<?import org.example.client.components.PlanesSelector?>
+<?import org.example.client.components.DarkBtn?>
+
+<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.client.MainSceneController" fx:id="root">
+  <AppMenuBar VBox.vgrow="NEVER" onBackAction="#onBackAction" />
+  <SplitPane dividerPositions="0.7505567928730512" focusTraversable="true" VBox.vgrow="ALWAYS" styleClass="bottom-strip">
+    <TabPane prefHeight="525.0" prefWidth="503.0" tabClosingPolicy="UNAVAILABLE" styleClass="visual-pane">
+      <Tab text="Runway">
+        <ScrollPane fitToWidth="false" fitToHeight="false" pannable="true" hbarPolicy="AS_NEEDED" vbarPolicy="NEVER">
+          <Runway fx:id="runwayComponent" obstacleSelector="${obstacleSelector}" planesSelector="${planesSelector}"/>
+        </ScrollPane>
+      </Tab>
+      <Tab text="Simple View / Exports">
+        <SimpleTableView prefHeight="55" fx:id="tableView"/>
+      </Tab>
+    </TabPane>
+    <ScrollPane fitToHeight="true" fitToWidth="true">
+      <VBox spacing="30" alignment="TOP_CENTER" styleClass="visual-pane">
+        <padding>
+          <Insets top="20" right="10" bottom="10" left="10"/>
+        </padding>
+        <VBox spacing="10.0">
+          <Label text="Aircraft Status: Takeoff/Landing" alignment="TOP_CENTER" styleClass="var-label" fx:id="status"/>
+          <ComboBox fx:id="aircraftStatus"  promptText="Aircraft Status" style="-fx-font-size: 15px;" prefWidth="150">
+            <items>
+              <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Takeoff" />
+                <String fx:value="Landing" />
+              </FXCollections>
+            </items>
+          </ComboBox>
+        </VBox>
+        <VBox spacing="10">
+          <Label text="Runway Side-On/Top-Down View" alignment="TOP_CENTER" styleClass="var-label"/>
+          <ComboBox fx:id="topsideComboBox" promptText="Aircraft Status" style="-fx-font-size: 15px;" prefWidth="150">
+            <items>
+              <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Side On View" />
+                <String fx:value="Top Down View" />
+              </FXCollections>
+            </items>
+          </ComboBox>
+        </VBox>
+        <Accordion VBox.vgrow="ALWAYS">
+          <panes>
+            <TitledPane text="Preload Runway Details" styleClass="tilted-pane">
+              <VBox spacing="20" styleClass="dropdown-pane">
+                <VBox spacing="10">
+                  <Label text="Select Airport" styleClass="section-label"/>
+                  <ComboBox fx:id="prefillAirportSelector" promptText="Choose airport" style="-fx-font-size: 15px;">
+                    <items>
+                      <FXCollections fx:factory="observableArrayList">
+                      </FXCollections>
+                    </items>
+                  </ComboBox>
+
+                  <Label text="Select Runway" styleClass="section-label"/>
+                  <ComboBox fx:id="prefillRunwaySelector" promptText="Choose runway" style="-fx-font-size: 15px;">
+                    <items>
+                      <FXCollections fx:factory="observableArrayList">
+                      </FXCollections>
+                    </items>
+                  </ComboBox>
+
+                </VBox>
+              </VBox>
+            </TitledPane>
+            <TitledPane text="Import XML" styleClass="tilted-pane">
+              <VBox spacing="20" styleClass="dropdown-pane">
+                <VBox spacing="10">
+                  <Label text="Import XML file" styleClass="var-label"/>
+                  <HBox spacing="10">
+                    <Label text="path" styleClass="path-label" fx:id="path"/>
+                    <Button styleClass="chooser-button" text="Choose File" onAction="#onChooseFileClick"/>
+                    <Button styleClass="chooser-button" text="Import" onAction="#onImportClick"/>
+                  </HBox>
+
+                </VBox>
+              </VBox>
+            </TitledPane>
+            <TitledPane  text="Obstacle" styleClass="tilted-pane">
+              <VBox spacing="20" styleClass="dropdown-pane">
+                <HBox spacing="10">
+                  <VBox spacing="10">
+                    <Label text="Add Obstacle" styleClass="var-label"/>
+                      <ObstacleSelector prefWidth="200" minWidth="200" maxWidth="200" fx:id="obstacleSelector"/>
+
+                  </VBox>
+                  <VBox spacing="10">
+                    <Label text="Height (m)" styleClass="var-label"/>
+                    <DoubleTextField fx:id="obstacleHeight" prefWidth="50" styleClass="var-input"/>
+
+                  </VBox>
+                </HBox>
+                <VBox spacing="10.0">
+                  <Label text="Position from UT (m)" alignment="TOP_CENTER" styleClass="var-label"/>
+                  <DoubleTextField fx:id="obstacleUTDist" prefWidth="150" promptText="Enter Distance Here" styleClass="var-input" />
+                </VBox>
+                <VBox spacing="10.0">
+                  <Label text="Position from CL (m)" alignment="TOP_CENTER" styleClass="var-label"/>
+                  <DoubleTextField fx:id="obstacleCLDist" prefWidth="150" promptText="Enter Distance Here" styleClass="var-input"/>
+                </VBox>
+                <VBox spacing="10.0">
+                  <Label text="Position from LT (m)" alignment="TOP_CENTER" styleClass="var-label"/>
+                  <DoubleTextField fx:id="obstacleLTDist" prefWidth="150" promptText="Enter Distance Here" styleClass="var-input"/>
+                </VBox>
+                <Button alignment="CENTER" onAction="#onAddClick" text="Add" minHeight="50" maxHeight="50" minWidth="80" maxWidth="80" styleClass="add-button">Add</Button>
+              </VBox>
+            </TitledPane>
+            <TitledPane  text="Runway and Threshold" styleClass="tilted-pane" >
+              <VBox spacing="20" styleClass="dropdown-pane">
+                <Label text="Select Runway" styleClass="section-label"/>
+                <ComboBox fx:id="runwaySelector" promptText="Choose runway" style="-fx-font-size: 15px;">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="09L/27R" />
+                      <String fx:value="27L/09R" />
+                    </FXCollections>
+                  </items>
+                </ComboBox>
+                <ComboBox fx:id="LRSelector" promptText="Choose L/R" style="-fx-font-size: 15px;">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="" />
+                      <String fx:value="" />
+                    </FXCollections>
+                  </items>
+                </ComboBox>
+                <Label text="Threshold Displacement (m):" styleClass="var-label"/>
+                <IntegerTextField fx:id="thresholdVal" text="0" styleClass="var-input" />
+                <Button alignment="CENTER" onAction="#onAddThreshClick" text="Add" styleClass="add-button">Add</Button>
+              </VBox>
+            </TitledPane>
+            <TitledPane  text="Plane type" styleClass="tilted-pane">
+              <VBox spacing="20" styleClass="dropdown-pane">
+                <VBox spacing="10">
+                  <Label text="Select Plane Type" styleClass="var-label"/>
+                  <PlanesSelector prefWidth="200" minWidth="200" maxWidth="200" fx:id="planesSelector"/>
+                </VBox>
+                <Button alignment="CENTER" onAction="#onAddClick" text="Add" minHeight="50" maxHeight="50" minWidth="80" maxWidth="80" styleClass="add-button">Add</Button>
+              </VBox>
+            </TitledPane>
+            <TitledPane  text="Export Data" styleClass="tilted-pane">
+              <VBox spacing="20" styleClass="dropdown-pane">
+                <Label text="Export Options" styleClass="section-label"/>
+                  <Button text="Export to png" onAction="#saveToPng" styleClass="add-button"/>
+                  <Button text="Export to XML" onAction="#exportToXml" styleClass="add-button"/>
+                  <Button text="Export report pdf" onAction="#exportToPdf" styleClass="add-button"/>
+              </VBox>
+            </TitledPane>
+          </panes>
+        </Accordion>
+      </VBox>
+    </ScrollPane>
+  </SplitPane>
+  <HBox id="HBox" alignment="CENTER_LEFT" spacing="30.0" VBox.vgrow="NEVER" styleClass="bottom-strip">
+    <Label text="LOWER THRESHOLD" styleClass="threshold-label"/>
+    <Label text="X" alignment="CENTER" fx:id="threshold" styleClass="thresh-display" />
+    <Pane HBox.hgrow="ALWAYS" />
+    <DarkBtn fx:id="darkbtn" styleClass="roundbtn"/>
+    <HelpBtn styleClass="roundbtn" fx:id="helpbtn"/>
+    <padding>
+      <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+    </padding>
+  </HBox>
+</VBox>
