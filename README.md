@@ -140,12 +140,14 @@ Built as part of a university software engineering course using **Scrum methodol
 - Michaela Hegarty: Obstacle management, calculations, frontend integration.
 
 ## Deliverables List
+All deliverable PDFs for this coursework are available in the shared OneDrive folder:  
+**[View Deliverables Folder](https://1drv.ms/f/c/677d02262f1a646b/ElOmTzKOL-NMgrvY27mUacQB-yyMIP0hbas9hAG27B4uFA?e=ng19vs)**
 
-Below are downloadable links to all major coursework deliverables:
+### Included Deliverables
+- Deliverable 1 (Stakeholder Analysis and Requirements)
+- Deliverable 2 (Design Architecture)
+- Deliverable 3 (Testing Report)
+- Deliverable 4 (Sprint Documentation)
+- Final Report
 
-- [Deliverable 1 (Stakeholder Analysis and Requirements)](./files/deliverable1.pdf)
-- [Deliverable 2 (Design Architecture)](./files/deliverable2.pdf)
-- [Deliverable 3 (Testing Report)](./files/deliverable3.pdf)
-- [Deliverable 4 (Sprint Documentation)](./files/deliverable4.pdf)
-- [Final Report](./files/final_report.pdf)
 
