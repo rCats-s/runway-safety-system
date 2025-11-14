@@ -19,6 +19,7 @@ A **full-stack Java application** for airport runway safety management, built by
   - [Key Interfaces](#key-interfaces)
 - [Technical Highlights](#technical-highlights)
 - [Role & Contribution](#role-&-contribution)
+- [Deliverables List](#deliverables-list)
 ---
 
 
@@ -137,3 +138,14 @@ Built as part of a university software engineering course using **Scrum methodol
 - Emily Armstrong: JavaFX visualizations for top down view, testing.
 - Ilia Desiatchenko: Authentication system, user management, backend testing.
 - Michaela Hegarty: Obstacle management, calculations, frontend integration.
+
+## Deliverables List
+
+Below are downloadable links to all major coursework deliverables:
+
+- [Deliverable 1 (Stakeholder Analysis and Requirements)](./files/deliverable1.pdf)
+- [Deliverable 2 (Design Architecture)](./files/deliverable2.pdf)
+- [Deliverable 3 (Testing Report)](./files/deliverable3.pdf)
+- [Deliverable 4 (Sprint Documentation)](./files/deliverable4.pdf)
+- [Final Report](./files/final_report.pdf)
+
